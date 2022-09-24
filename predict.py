@@ -7,7 +7,7 @@ import cms_procedures as cms
 # returns a prediction of success (True or False).
 def predict_procedure_outcome(model, procedure_attributes):
     prediction_score = model.predict(procedure_attributes)
-    return prediction_score > 0.5
+    return prediction_score[0] > 0.5
 
 
 # takes as input the trained model and a dictionary of procedure attributes
